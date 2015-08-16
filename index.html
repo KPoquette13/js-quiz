@@ -6,76 +6,55 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Marvel:700,400' rel='stylesheet' type='text/css'>
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
 	<div class="main">
-		<h1>MARVEL</h1>
-		<h2>Quiz</h2>
-		<div class="page clearfix">
-			<div class="panel">
-				<p class="question">Who is considered the richest character in the Marvel universe?</p>
-				<form class= "answers" id="question-five">
-					<input type="radio" name="fifth-question" value="tony stark" > Tony Stark<br />
-					<input type="radio" name="fifth-question" value="black panther"> Black Panther<br />
-					<input type="radio" name="fifth-question" value="dr doom"> Dr. Doom<br />
-					<input type="radio" name="fifth-question" value="reed richards"> Reed Richards<br />
-					<input type="radio" name="fifth-question" value="hank pym"> Hank Pym<br />
-				</form>
-			</div>
-			<div class="panel clearfix">
-				<p class="question">Which Guardians of the Galaxy character is related to the villain Thanos?</p>
-				<form class= "answers" id="question-two">
-					<input type="radio" name="second-question" value="gamora" > Gamora<br />
-					<input type="radio" name="second-question" value="drax"> Drax<br />
-					<input type="radio" name="second-question" value="starlord"> Starlord<br />
-					<input type="radio" name="second-question" value="rocket racoon"> Rocket Racoon<br />
-					<input type="radio" name="second-question" value="groot"> Groot<br />
-				</form>
-				<div class="comic">
-					<img src="images/gotg-back.jpg">
+		<!--Left Page-->
+		<div class="page-one">
+			<h1>MARVEL</h1>
+			<h2>Quiz</h2>
+			<!--Area for Question-->
+			<div class="q-area">
+				<div class="question clearfix">
+					
+				</div>
+				<div class="answers clearfix">
+					<button class="a-button" id="a-one"></button><br />
+					<button class="a-button" id="a-two"></button><br />
+					<button class="a-button" id="a-three"></button><br />
+					<button class="a-button" id="a-four"></button><br />
+					<button class="a-button" id="a-five"></button>
 				</div>
 			</div>
-			<div class="panel">
-				<p class="question">In the comic event "Civil War", who leads the faction opposed to Iron Man?</p>
-				<form class= "answers" id="question-three">
-					<input type="radio" name="third-question" value="professor x" > Professor X<br />
-					<input type="radio" name="third-question" value="spiderman"> Spiderman<br />
-					<input type="radio" name="third-question" value="antman"> Ant-man<br />
-					<input type="radio" name="third-question" value="nick fury"> Nick Fury<br />
-					<input type="radio" name="third-question" value="captain america"> Captain America<br />
-				</form>
-				<div class="comic">
-					<img src="images/cap-back.jpg">
-				</div>
+			<!--Area for feedback -->
+			<div class="f-area">
+				<h2 id="feedback-title">Correct!</h2>
+				<p class="feedback-text">Total Correct: <span id="correct-num"></span>/<span id="q-num"></span></p>
+				<p class="restart-text hidden">You got <span id="final-correct"></span> out of <span id="total-q"></span> questions correct. If you would like to retake the quiz, hit the 'Try Again' button and give it another go.</p>
+				<button class="f-button">Next Question</button>
+				<button class="restart hidden">Try Again</button>
 			</div>
-			<div class="panel clearfix">
-				<p class="question">Dr. Doom, common villain for the Fantastic Four, is the ruler of what fictional country?</p>
-				<form class= "answers" id="question-four">
-					<input type="radio" name="fourth-question" value="wakanda" > Wakanda<br />
-					<input type="radio" name="fourth-question" value="asgard"> Asgard<br />
-					<input type="radio" name="fourth-question" value="latveria"> Latveria<br />
-					<input type="radio" name="fourth-question" value="midgard"> Midgard<br />
-					<input type="radio" name="fourth-question" value="Untharis"> Untharis<br />
-				</form>
-				<div class="comic">
-					<img src="images/doom-back.jpg">
-				</div>
+			<p class="page-num clearfix"><span id="p-num">1</span>/5</p>
+		</div>
+		<!--Right Page -->
+		<div class="page-two">
+			<div class="panel money-back" id="panel-one">
+			
 			</div>
-			<div class="panel-long clearfix">
-				<p class="question-long">Blind lawyer Matt Murdock moonlights as an acrobatic martial-arts crime fighter as what character in the comics, movie, and netflix series which shares his name?</p>
-				<form class= "answers" id="question-one">
-					<input type="radio" name="first-question" value="iron fist" > Iron Fist<br />
-					<input type="radio" name="first-question" value="carnage"> Carnage<br />
-					<input type="radio" name="first-question" value="deadpool"> Deadpool<br />
-					<input type="radio" name="first-question" value="daredevil"> Daredevil<br />
-					<input type="radio" name="first-question" value="spiderman"> Spiderman<br />
-				</form>
-				<div class="comic">
-					<img src="images/dd-back.jpg">
-				</div>
+			<div class="panel gotg-back clearfix" id="panel-two">
+			
 			</div>
-			<p class="page-count"><span id="q-count">1</span>/5</p>
-
+			<div class="panel cap-back" id="panel-three">
+			
+			</div>
+			<div class="panel doom-back clearfix" id="panel-four">
+				
+			</div>
+			<div class="panel-long dd-back clearfix" id="panel-five">
+				
+			</div>
 		</div>
 	</div>
 </body>
